@@ -149,7 +149,10 @@ export default function Evaluation() {
       // 5. Si hay preguntas, actualizo estado
       console.log(`🎉 Cargando ${questions.data.length} preguntas`);
       setQuestions(questions.data);
+      console.log(`🎉 Total preguntas: ${questions.total}`);
       setTotalQuestions(questions.total);
+
+      loadingFalse()
     })();
   }, []);
 
