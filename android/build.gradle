@@ -35,3 +35,15 @@ allprojects {
 
 apply plugin: "expo-root-project"
 apply plugin: "com.facebook.react.rootproject"
+// Force Kotlin to use JVM target 17
+gradle.projectsEvaluated {
+  subprojects {
+    if (plugins.hasPlugin("kotlin-android")) {
+      tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+        kotlinOptions {
+          jvmTarget = "17"
+        }
+      }
+    }
+  }
+}
