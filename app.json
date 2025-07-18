@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "quick-rater-app",
+    "slug": "quick-rater-app",
+    "platforms": ["ios", "android", "web"],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.agt921220.quickraterapp",
+      "runtimeVersion": {
+        "policy": "appVersion"
+      }
+    },
+    "android": {
+      "permissions": [],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.agt921220.quickraterapp",
+      "runtimeVersion": "1.0.0"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "allowNetwork": [
+        "*"
+      ],
+      "eas": {
+        "projectId": "c11126c3-7556-4853-b95b-9971aca39fa4"
+      }
+    },
+    "updates": {
+      "url": "https://u.expo.dev/c11126c3-7556-4853-b95b-9971aca39fa4"
+    },
+    "plugins": [
+      "expo-font",
+      "expo-web-browser"
+    ]
+  }
+}
