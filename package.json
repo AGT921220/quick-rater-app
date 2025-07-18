@@ -6,6 +6,7 @@
     "android": "expo run:android",
     "ios": "expo run:ios",
     "web": "expo start --web",
+    "expo-doctor": "npx expo-doctor",
     "build-web": "npx expo-cli build:web",
     "eas-build-android": "eas build --platform android --profile preview --local",
     "eas-build-android-prod": "eas build --platform android --profile preview",
@@ -13,7 +14,8 @@
     "prod-build-android": "./gradlew assembleRelease",
     "gradle-clean": "./gradlew clean",
     "prebuild": "npx expo prebuild",
-    "eas-clean-cache": "eas build:clear-cache"
+    "eas-clean-cache": "rm -rf .expo .eas android/build android/.gradle /tmp/alfredo/eas-build-local-nodejs/"
+
   },
   "dependencies": {
     "@expo/metro-runtime": "~5.0.4",
@@ -52,7 +54,7 @@
     "react-native-radio-buttons-group": "^3.0.3",
     "react-native-reanimated": "~3.17.4",
     "react-native-reanimated-carousel": "^3.5.1",
-    "react-native-safe-area-context": "^3.1.9",
+    "react-native-safe-area-context": "5.4.0",
     "react-native-screens": "~4.11.1",
     "react-native-step-indicator": "^1.0.3",
     "react-native-vector-icons": "10.0.0",
@@ -65,6 +67,27 @@
     "@babel/core": "^7.26.0",
     "@expo/webpack-config": "^19.0.1",
     "metro-react-native-babel-preset": "^0.77.0"
+  },
+  "expo": {
+    "doctor": {
+      "reactNativeDirectoryCheck": {
+        "exclude": [
+          "expo-random",
+          "react-native-animated-spinkit",
+          "react-native-easy-toast",
+          "react-native-keyboard-aware-scroll-view",
+          "react-native-step-indicator",
+          "@mdi/js",
+          "@mdi/react",
+          "base64-js",
+          "prop-types",
+          "react-native-background-image",
+          "react-native-elements",
+          "react-native-vector-icons",
+          "typescript"
+        ]
+      }
+    }
   },
   "private": true,
   "packageManager": "yarn@4.9.2"
